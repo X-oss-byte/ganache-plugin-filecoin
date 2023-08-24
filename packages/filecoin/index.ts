@@ -27,13 +27,13 @@ type FilecoinFlavor = Flavor<
 >;
 const FilecoinFlavor: FilecoinFlavor = {
   flavor: "filecoin",
-  connect: (options, executor) => new Connector(options, executor),
+  connect: (options: any, executor: any) => new Connector(options, executor),
   options: {
     provider: FilecoinOptionsConfig,
     server: ServerOptionsConfig,
     cli: CliOptionsConfig
   },
   ready
-};
+} as any;
 
 export default FilecoinFlavor;

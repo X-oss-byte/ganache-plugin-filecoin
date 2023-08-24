@@ -1,11 +1,11 @@
 import FilecoinApi from "./api";
 import type {
-  Executor,
   Connector as IConnector,
   RecognizedString,
   HttpRequest,
   WebSocket
 } from "@ganache/flavor";
+import type { Executor } from "@ganache/utils";
 import {
   JsonRpcRequest,
   JsonRpcResponse,

@@ -1,9 +1,8 @@
 import { join } from "path";
-import FilecoinFlavor from "../../";
-import Server from "../../../../../packages/core/src/server";
+import { server } from "ganache";
 
 const getServer = async (port: number) => {
-  const server = new Server<FilecoinFlavor>({
+  const s = server<any>({
     // `join(__dirname, "..", "..") as unknown as "filecoin""` since @ganache/filecoin isn't
     // _installed_ in this package since it _is_ this package; we can't use the
     // package name itself here.
@@ -19,9 +18,9 @@ const getServer = async (port: number) => {
         log: () => {}
       }
     }
-  });
-  await server.listen(port);
-  return server;
+  } as any);
+  await s.listen(port);
+  return s;
 };
 
 export default getServer;
