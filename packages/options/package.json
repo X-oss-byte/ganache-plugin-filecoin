@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "",
   "author": "Tim Coulter",
   "homepage": "https://github.com/trufflesuite/ganache/tree/develop/src/chains/filecoin/options#readme",
