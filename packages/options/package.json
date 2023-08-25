@@ -16,8 +16,7 @@
     "test": "test"
   },
   "files": [
-    "lib/index.*",
-    "lib/src/index.d.ts",
+    "lib/*",
     "dist"
   ],
   "repository": {
